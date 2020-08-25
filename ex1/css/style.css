@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+.box{ /* 블록 타입 : 화면을 가득 채움*/
+    background-color: #f00;
+    height:300px;
+}
+
+.msg{
+    font-size:30px;
+    
+}
+
+span{ /*인라인 : span, a, img */
+    background-color: #00f;
+    display:block;
+}
+
+@media (max-width:600px){
+    .box{
+        background-color: #0f0;
+    }
+    .msg{
+        font-size: 14px;
+    }
+}
