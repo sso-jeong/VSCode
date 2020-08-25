@@ -34,6 +34,35 @@
             font-weight: 700;
         }
 
+        .logo {
+            float: left;
+
+        }
+
+        .clearfix {
+            clear:both;
+        }
+
+        .menu {
+            float:right;
+        }
+
+        header {
+            /*위 아래 좌 우 */
+            padding: 30px 50px;
+        }
+
+        .menu > span {
+            font-family: 'Poppins', sans-serif;
+            margin-left: 50px;
+            font-size:15px;
+        }
+
+        .active {
+            color:#f00;
+            font-weight:700;
+        }
+
         @media (max-width:1200px){
             .pic {
                 background-image: url(images/cat.jpg);
@@ -60,11 +89,13 @@
         <h1 class="logo">Greenart</h1>
         <div class="menu" >
             <i class="fas fa-bars"></i>
+            <span class="active">HOME</span>
             <span>Company</span>
             <span>Portfolio</span>
             <span>Project</span>
             <span>Contact</span>
         </div>
+        <div class="clearfix"></div>
     </header>
     <main>
         <div class="pic">
