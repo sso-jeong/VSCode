@@ -16,6 +16,9 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, 50%);
+
+            padding: 20px;
+            line-height: 2;
         }
 
         .login-box3 {
@@ -42,6 +45,16 @@
         input[type="password"] {
             background-color: #00f;
         }
+
+        button {
+            border:0;
+            outline:0;
+            width: 100%;
+            background-color: tomato;
+            color:#fff;
+            padding:4px;
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -63,7 +76,14 @@
     <div class="login-box">
         <span>br 태그</span>
         아이디 : <input type="text" name="" id="" class="" /><br />
-        비밀번호 : <input type="password" name="" id="" class="" />
+        비밀번호 : <input type="password" name="" id="" class="" /><br />
+        성별 : <input type="radio" name="gender" value="1" id="" class="" /> 남자
+        <input type="radio" checked name="gender" value="2" id="" class="" /> 여자<br />
+        <input type="checkbox" checked name="" id="" class="" />독서
+        <input type="checkbox" name="" id="" class="" />여행
+        <input type="checkbox" name="" id="" class="" />게임<br />
+        <input type="submit" value="회원가입" /><br />
+        <input type="button" value="회원가입" /><br />
     </div>
 
     <div class="login-box2">
