@@ -1,0 +1,119 @@
+@charset 'utf-8';
+
+/* 메뉴 만들기 */
+ul>li {
+    /* 장점 : 사용법 간단 / 단점 : float => clearfix 작업 필요 */
+    /* float: left; */
+    /* 자동적으로 여백이 생김 / 잘 안씀*/
+    /* display: inline-block; */
+    background-color: tomato;
+
+}
+
+ul {
+    display: flex;
+    /* 화면 끝으로 : flex-end / 화면 가운데로 : flex-center */
+    justify-content: flex-end;
+}
+
+tr {
+    height: 45px;
+    text-align: center;
+}
+
+td {
+    border: 1px solid #d6dce7;
+}
+
+/* 첫 행에만 반영*/
+tr:first-child {
+    background-color: #6f809a;
+    color: #fff;
+    font-weight: 700;
+}
+
+tr:nth-child(2n) {
+    background-color: #eff3f9;
+}
+
+.cnt-float-l {
+    background-color: #3f51b5;
+    color: #fff;
+    width: 250px;
+    height: 35px;
+    border-radius: 2px;
+    text-align: center;
+    display: inline-block;
+    line-height: 35px;
+}
+
+.search-float-r {
+    float: right;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.top-grp {
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.sel {
+    font-size: 12px;
+    border: 1px solid #d5d5d5;
+    width: 150px;
+    height: 35px;
+    border-radius: 2px;
+
+}
+
+.input {
+    font-size: 12px;
+    border: 1px solid #d5d5d5;
+    width: 200px;
+    height: 35px;
+    vertical-align: top;
+    padding: 0 4px;
+}
+
+.btn {
+    font-size: 12px;
+    background-color: #3f51b5;
+    color: #fff;
+    width: 95px;
+    height: 35px;
+    border-radius: 2px;
+    vertical-align: top;
+    cursor: pointer;
+
+}
+
+.page-grp {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.page {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ddd;
+    /* 한 줄에 너비 높이 동일하게 주는 것 */
+    display: inline-block;
+    line-height: 35px;
+}
+
+.page>a {
+    color: #555;
+}
+
+.active {
+    background-color: #3f51b5;
+    border: 1px solid transparent;
+}
+
+a.white {
+    color: #fff;
+    text-decoration: none;
+}
