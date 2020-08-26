@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>텍스트 관련 태그2</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        /* 메뉴 만들기 */
+        ul>li {
+            /* 장점 : 사용법 간단 / 단점 : float => clearfix 작업 필요 */
+            /* float: left; */
+            /* 자동적으로 여백이 생김 / 잘 안씀*/
+            /* display: inline-block; */
+            background-color: tomato;
+
+        }
+
+        ul {
+            display: flex;
+            /* 화면 끝으로 : flex-end / 화면 가운데로 : flex-center */
+            justify-content: flex-end;
+        }
+    </style>
+
 </head>
+
 <body>
     <a href="#">하이퍼링크</a><br /><br />
     <button type="submit">로그인</button><br /><br />
-    
+
+    <!-- 짧은 글 한줄 span -->
+    <span>그린컴퓨터학원</span>
+
+    <!-- paragraph : 단락 - 글자를 많이 적을 때  -->
+    <p>The articles listed below are archived on this site, and will in some cases be not quite the same as the
+        originally published article. This may be due to editorial changes by the publisher which I have “undone” here,
+        or perhaps due to corrections made by me after the original publication of the article.</p>
+
+    <!-- 번호가 있는 목록 : Order List -->
+    <ol>
+        <li>컴퓨터</li>
+        <li>노트북</li>
+        <li>서버</li>
+    </ol>
+
+    <!-- 번호가 없는 목록 : Unorder List -->
+    <ul>
+        <!-- 블록 리스트 타입 -->
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Porfolio</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
 </body>
+
 </html>

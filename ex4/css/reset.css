@@ -1,1 +1,43 @@
 @charset 'utf-8';
+
+* {
+    /*바깥 여백*/
+    margin: 0;
+    /*안쪽 여백*/
+    padding: 0;
+    /*div 두께 포함*/
+    box-sizing: border-box;
+}
+
+/* 화면 전체 글자 크기*/
+body {
+    font-size: 14px;
+}
+
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    /* 배경 투명처리 */
+    background-color: transparent;
+}
+
+p {
+    /* 현재 글자 크기에 180% */
+    line-height: 1.8;
+    /* 균등 정렬 */
+    text-align: justify;
+}
+
+ul {
+    list-style: none;
+}
