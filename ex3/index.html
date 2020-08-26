@@ -4,36 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--반응형 홈페이지 디폴트 소스-->
     <title>html 태그 예제1</title>
-    <style>
-        .img {
-            width: 400px;
-            border-radius: 50%;
-            border:2px dotted #f00;
-        }
-
-        .bg {
-            background-image: url(images/cat.jpg);
-            background-repeat: no-repeat; /*배경 반복 안되도록*/
-            background-size: cover; /*배경 보이게*/
-            background-position: center; /*배경 가운데로 배치*/
-            width: 400px;
-            height: 600px;
-            border-radius: 50%;
-            border:2px dotted #00f;
-
-            position: relative; /*글자 가운데 배치*/
-        }
-
-        .txt {
-            position: absolute;
-            top:50%;
-            left:50%;
-            transform: translate(-50%, -50%);
-            font-size: 50px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <a href="http://naver.com" target="blank">naver.com</a>
     <img class="img" title="고양이 이미지" alt="이미지가 보이지 않을 때" src="images/cat.jpg" />
