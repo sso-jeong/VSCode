@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 관련 태그</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .login-box {
+            width: 350px;
+            height: 250px;
+            background-color: #eee;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+
+        .login-box3 {
+            width: 350px;
+            height: 250px;
+
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            transform: translate(-20%, 20%);
+        }
+
+        /* 테두리 여백 */
+        input {
+            outline: none;
+            padding: 0 5px;
+            background-color: #e7e7e7;
+        }
+
+        input[type="text"] {
+            background-color: #f00;
+        }
+
+        input[type="password"] {
+            background-color: #00f;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- hn 관련 태그 : 중요한 글자에 사용 -->
+    <h1 class="logo">
+
+        <!-- 새 창으로 띄우기 -->
+        <a target="_blank" href="https://www.apple.com/kr/">LOGO</a>
+    </h1>
+    <h1>
+        <a href="https://www.apple.com/">
+            <img src="images/logo.png" alt="" title="" />
+        </a>
+    </h1>
+
+    <!-- 줄바꿈 : <br /> OR <p></p> OR <div></div> -->
+    <div class="login-box">
+        <span>br 태그</span>
+        아이디 : <input type="text" name="" id="" class="" /><br />
+        비밀번호 : <input type="password" name="" id="" class="" />
+    </div>
+
+    <div class="login-box2">
+        <span>p 태그</span>
+        <p>아이디 : <input type="text" name="" id="" class="" /></p>
+        <p>비밀번호 : <input type="password" name="" id="" class="" /></p>
+    </div>
+
+    <div class="login-box3">
+        <span>div 태그</span>
+        <div>아이디 : <input type="text" name="" id="" class="" /></div>
+        <div>비밀번호 : <input type="password" name="" id="" class="" /></div>
+    </div>
+
+</body>
+
+</html>
