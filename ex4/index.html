@@ -22,6 +22,27 @@
             /* 화면 끝으로 : flex-end / 화면 가운데로 : flex-center */
             justify-content: flex-end;
         }
+
+        tr {
+            height: 45px;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid #d6dce7;
+        }
+
+        /* 첫 행에만 반영*/
+        tr:first-child {
+            background-color: #6f809a;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        tr:nth-child(2n) {
+            background-color: #eff3f9;
+        }
+
     </style>
 
 </head>
@@ -57,7 +78,7 @@
 
     <table>
         <tr>
-            <td>-</td>
+            <td><input type="checkbox"></td>
             <td>번호</td>
             <td>분류</td>
             <td>게시물제목</td>
@@ -68,9 +89,40 @@
         </tr>
 
         <tr>
-            <td>
-                <input type="checkbox">
-            </td>
+            <td><input type="checkbox"></td>
+            <td>1010</td>
+            <td>공지</td>
+            <td>게시물 리스트 테스트입니다.</td>
+            <td>관리자</td>
+            <td>100</td>
+            <td>2020.08.26</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>1010</td>
+            <td>공지</td>
+            <td>게시물 리스트 테스트입니다.</td>
+            <td>관리자</td>
+            <td>100</td>
+            <td>2020.08.26</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>1010</td>
+            <td>공지</td>
+            <td>게시물 리스트 테스트입니다.</td>
+            <td>관리자</td>
+            <td>100</td>
+            <td>2020.08.26</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox"></td>
             <td>1010</td>
             <td>공지</td>
             <td>게시물 리스트 테스트입니다.</td>
