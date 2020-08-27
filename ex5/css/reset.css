@@ -1,0 +1,27 @@
+@charset 'utf-8';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Catamaran', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* 링크에 마우스 올렸을 때 밑줄 생성되도록 */
+a:hover {
+    text-decoration: underline;
+}
+
+/*이미지가 inline 타입이라 밑의 문닫 꼭 필요*/
+img {
+    display: block;
+}

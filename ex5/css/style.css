@@ -1,0 +1,207 @@
+@charset 'utf-8';
+
+header {
+    /*화면을 보는 해상도에 맞춰서 viewpoint width / hight 맞춤*/
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/avocado.jpg);
+    /*사진을 화면 사이즈에 맞게 조정해야하는 필수 문법*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer {
+    width: 100%;
+    height: 250px;
+    background-color: #000;
+}
+
+section {
+    width: 100%;
+    /*이미지 섹션은 세로 값 X padding 사용해야 함 위아래 좌우*/
+    padding: 80px 0;
+}
+
+section:nth-child(2n) {
+    background-color: #eee;
+}
+
+.top {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    position: relative;
+
+}
+
+.logo {
+    float: left;
+}
+
+.menu {
+    float: right;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.menu>a {
+    margin-left: 40px;
+}
+
+.active {
+    font-weight: 700;
+}
+
+.bg-content {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.bg-content>h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 60px;
+    letter-spacing: 2px;
+    /*자간*/
+    text-align: center;
+
+}
+
+.dot {
+    color: #ffde00;
+}
+
+.bg-content>p {
+    /* 투명도 조절 */
+    color: rgb(255, 255, 255, 0.7);
+    /*글자를 정렬하는 것 div는 사각형이기 때문에 정렬이 안됨 div 정렬은 magin 0 auto로 정렬*/
+    text-align: center;
+
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.btn-grp {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn1 {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn1:hover {
+    border: 2px solid #ffde00;
+    background-color: transparent;
+    color: #ffde00;
+    transition: 0.9s;
+}
+
+.btn2 {
+    border: 2px solid transparent;
+    background-color: #ffde00;
+    color: #fff;
+}
+
+.btn2:hover {
+    border: 2px solid #ffde00;
+    background-color: transparent;
+    color: #fff;
+    transition: 0.9s;
+}
+
+
+.title,
+.two-title {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title>h2,
+.two-title>h2 {
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.title>p,
+.two-title>p {
+    font-size: 14px;
+    margin-bottom: 50px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.items {
+    width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    /*가로졍렬*/
+    justify-content: space-between;
+}
+
+.item {
+    background-color: #ccc;
+    width: 280px;
+}
+
+.item>img {
+    transition: 0.6s;
+}
+
+/*이미지 위에 마우스 올렸을 때 사진 커지게 AND 속도*/
+.item>img:hover {
+    transform: scale(1.2);
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.item>img {
+    width: 280px;
+    height: 400px;
+}
+
+.two-items {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.two-item {
+    width: 380px;
+}
+
+/* > : 바로 밑에*/
+.two-item img {
+    width: 380px;
+    height: 400px;
+    transition: 0.7s;
+}
+
+.two-items img:hover {
+    transform: scale(1.3);
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.img-hidden {
+    overflow: hidden;
+}
