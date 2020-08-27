@@ -16,6 +16,16 @@
             background-color: tomato;
             display: inline;
         }
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        ul li {
+            list-style: none;
+            margin-left: 50px;
+        }
     </style>
 </head>
 
@@ -27,6 +37,30 @@
     <span class="inline">동해몰</span><br /><br />
 
     <div class="block">동해물</div>
+
+    <ul>
+        <li><a href="">메뉴1</a></li>
+        <li><a href="">메뉴2</a></li>
+        <li><a href="">메뉴3</a></li>
+        <li><a href="">메뉴4</a></li>
+        <li><a href="">메뉴5</a></li>
+    </ul>
+
+    <!-- table-> tr(줄) td(칸) -->
+    <div class="tbl" style="padding:20px 50px">
+        <table border="1" style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <!-- 테이블 헤드라인 진하게, 가운데 -->
+                <th>1</th>
+                <th>2</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>
