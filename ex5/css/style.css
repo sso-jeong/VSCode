@@ -20,7 +20,7 @@ footer {
 section {
     width: 100%;
     /*이미지 섹션은 세로 값 X padding 사용해야 함 위아래 좌우*/
-    padding: 80px 0;
+    padding: 150px 0;
 }
 
 section:nth-child(2n) {
