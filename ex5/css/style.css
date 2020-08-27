@@ -192,7 +192,7 @@ button {
 /* > : 바로 밑에*/
 .two-item img {
     width: 380px;
-    height: 400px;
+    height: 500px;
     transition: 0.7s;
 }
 
@@ -204,4 +204,46 @@ button {
 
 .img-hidden {
     overflow: hidden;
+}
+
+.item-content {
+    background-color: #fff;
+    padding: 20px;
+    height: 180px;
+}
+
+.item-content h3 {
+    margin-bottom: 10px;
+}
+
+.item-content p {
+    margin-bottom: 10px;
+    line-height: 1.3;
+    color: reba(0, 0, 0, 0.7);
+}
+
+.tag {
+    color: #fff;
+    font-size: 12px;
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    text-align: center;
+    /*inline 적용 x*/
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+.new {
+    background-color: cornflowerblue;
+}
+
+.hit {
+    background-color: tomato;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 700;
 }
