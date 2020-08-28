@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지를 이용한 owl carousel</title>
+
+    <link rel="stylesheet" href="assets/owl.carousel.css">
+    <link rel="stylesheet" href="assets/owl.theme.default.css">
+
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="owl.carousel.js"></script>
+    <script src="https://kit.fontawesome.com/935d75ad40.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .item {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 300px;
+            height: 500px;
+
+            position: relative;
+        }
+
+        section {
+            width: 1500px;
+            margin: 0 auto;
+        }
+
+        .item-title h1 {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .rec {
+            width: 50px;
+            height: 50px;
+            line-height: 45px;
+            color: tomato;
+            font-weight: 700;
+            border: 3px solid tomato;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            display: inline-block;
+            font-size: 12px;
+            text-align: center;
+
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .bag,
+        .love,
+        .card {
+            width: 50px;
+            height: 50px;
+            line-height: 45px;
+            font-weight: 700;
+            border-radius: 50%;
+            display: inline-block;
+            font-size: 12px;
+            text-align: center;
+
+            position: absolute;
+            top: 45%;
+
+        }
+
+        .bag:hover,
+        .love:hover,
+        .card:hover {
+            width: 50px;
+            height: 50px;
+            line-height: 45px;
+            font-weight: 700;
+            border-radius: 50%;
+            display: inline-block;
+            font-size: 12px;
+            text-align: center;
+
+            background-color: rgba(255, 255, 255, 0.5);
+
+        }
+
+
+
+        .bag {
+            border: 3px solid black;
+            background-color: black;
+            color: white;
+
+            position: absolute;
+            left: 20px;
+        }
+
+        .love {
+            border: 3px solid white;
+            background-color: white;
+            color: red;
+
+            position: absolute;
+            right: 42%;
+
+        }
+
+        .card {
+            border: 3px solid tomato;
+            background-color: tomato;
+            color: white;
+            position: absolute;
+            right: 5%;
+
+        }
+
+        .item-content {
+            background-color: #fff;
+            padding: 20px;
+            height: 300px;
+            width: 300px;
+        }
+
+        .item-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .item-content p {
+            margin-bottom: 10px;
+            line-height: 1.3;
+            color: reba(0, 0, 0, 0.7);
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div class="item-title">
+            <h1>BEST IMAGES</h1>
+        </div>
+
+        <div class="item-list owl-carousel owl-theme">
+            <div class="item-top">
+                <div class="item" style="background-image: url(images/1.jpg);">
+                    <span class="rec">BEST</span>
+                </div>
+                <div class="item-content">
+                    <h3>WACTH</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    <span class="price">$ 30.0</span>
+                </div>
+            </div>
+            <div class="item-top">
+                <div class="item" style="background-image: url(images/2.jpg);">
+
+                    <span class="icon">
+                        <span class="bag">
+                            <i class="fas fa-shopping-bag"></i>
+                        </span>
+                        <span class="love">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                        <span class="card">
+                            <i class="fas fa-credit-card"></i>
+                        </span>
+                    </span>
+
+                </div>
+
+                <div class="item-content">
+                    <h3>CAMERA</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    <span class="price">$ 60.0</span>
+                </div>
+            </div>
+
+            <div class="item-top">
+                <div class="item" style="background-image: url(images/3.jpg);"></div>
+                <div class="item-content">
+                    <h3>PHONE</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et voluptatum quibusdam eos totam
+                        perferendis quisquam voluptas amet. Consequatur eveniet aperiam recusandae, harum explicabo
+                        blanditiis excepturi.</p>
+                    <span class="price">$ 40.0</span>
+                </div>
+            </div>
+
+            <div class="item-top">
+                <div class="item" style="background-image: url(images/4.jpg);"></div>
+                <div class="item-content">
+                    <h3>TV</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et voluptatum quibusdam eos totam
+                        perferendis quisquam voluptas amet. </p>
+                    <span class="price">$ 100.0</span>
+                </div>
+            </div>
+
+            <div class="item-top">
+                <div class="item" style="background-image: url(images/5.jpg);"></div>
+                <div class="item-content">
+                    <h3>DESKTOP</h3>
+                    <p>Lorem ipsum dolor sit, amet</p>
+                    <span class="price">$ 120.0</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+<script>
+    $(function () {
+        var owl = $(".owl-carousel");
+
+        owl.owlCarousel({
+            items: 4,
+            loop: true,
+            nav: true,
+            dot: true
+        });
+
+    });
+</script>
+
+</html>
