@@ -8,12 +8,23 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/935d75ad40.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
         function checkDelete(uid) {
             var str = "사원정보가 삭제됩니다.\n삭제 후 자료는 복원할 수 없습니다.";
             if (confirm(str)) { //에 버튼 클릭하면...
                 window.location.href = "memberDelete.do?uid=" + uid;
+            }
+
+        }
+
+        function searchCheck() {
+            var str = document.frm.search.value;
+            if (str == "") {
+                alert("검색어를 입력하세요.");
+                document.frm.search.focus();
+                return false;
             }
 
         }
@@ -56,15 +67,18 @@
                         <h2>사내조직도 > 사원 정보목록</h2>
                     </div>
                     <div class="search-box">
-                        <form name="" method="post" action="">
+
+                        <form onSubmit="return searchCheck();" name="frm" method="post" action="http://www.naver.com">
                             <select class="sel">
                                 <option value="">검색방법</option>
                                 <option value="">사번</option>
                                 <option value="">이름</option>
                             </select>
-                            <input type="search" class="input" autofocus maxlength="10" tabindex="1" />
-                            <input type="search" class="input" maxlength="10" tabindex="2" />
-                            <button type="submit" class="btn">검색</button>
+                            <input name="search" type="search" class="input" id="search" autofocus maxlength="10"
+                                tabindex="1" />
+                            <button type="submit" class="btn" id="btn">검색</button>
+
+
                         </form>
 
 
@@ -237,5 +251,7 @@
     </div>
 
 </body>
+
+<!-- <script src="js/common.js"></script> -->
 
 </html>

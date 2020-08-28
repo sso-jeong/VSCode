@@ -1,61 +1,187 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>관리자 메인 레이아웃</title>
+
+    <title>Table</title>
+
     <link rel="stylesheet" href="css/reset.css">
-    <style>
-        .logo, .auth {
-            float:left;
-            padding:12px 0;
-        }
+    <link rel="stylesheet" href="css/style.css">
 
-        .clearfix {
-            clear: both;
-        }
+    <script src="https://kit.fontawesome.com/b615db66ca.js" crossorigin="anonymous"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        .logo {
-            width:15%;
-            text-align: center;
-            font-weight: 700;
-            font-size:18px;
-            text-transform: uppercase;
+    <script>
+        function checkDelete(uid) {
+            var str = "사원정보가 삭제됩니다.\n 삭제 후 자료는 복원할 수 없습니다.";
+            if (str) {
+                window.location.href = "memberDelete.do?uid=" + uid;
+            }
         }
-
-        .auth {
-            width:85%;
-        }
-
-        .page-wrap {
-            background-color:#eee;
-            padding:5px;
-        }
-
-        .grade {
-            float:left;
-            font-size:18px;
-            font-weight: 700;
-        }
-
-        .logout {
-            float:right;
-            font-size:18px;
-            font-weight: 700;
-        }
-    </style>
+    </script>
 </head>
+
 <body>
     <div class="page-wrap">
-        <div class="logo">
-            <a href="#">Administrator</a>
-        </div>
-        <div class="auth">
-            <div class="grade">{Greenart - 접속권한(admin)}</div>
-            <div class="logout">
-                <a href="#">로그아웃</a>
+
+        <div class="top">
+
+            <div class="logo">
+                <a href="index.html">관리자 페이지</a>
             </div>
+
+            <div class="auth">
+
+                <div class="grade">
+                    GreenArt - 접속권한(관리자)
+                </div>
+
+                <div class="logout">
+                    <a href="login.do">로그아웃</a>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
         </div>
+
+        <div class="bottom">
+
+            <div class="menu">
+                <ol>
+                    <li><a href="">사내조직도</a></li>
+                    <li><a href="">전자결재</a></li>
+                    <li><a href="">게시판관리</a></li>
+                    <li><a href="">일정관리</a></li>
+                    <li><a href="">급여 및 상여금관리</a></li>
+                    <li><a href="">회사정보</a></li>
+                </ol>
+
+            </div>
+
+            <div class="main">
+                <div class="search-box">
+                    <form name="" method="POST" action="">
+                        <select class="sel">
+                            <option value="">
+                                검색방법
+                            </option>
+                        </select>
+                        <input type="search" class="input" id="search" />
+                        <button type="submit" class="btn" id="btn">검색</button>
+                    </form>
+                </div>
+                <h2>사내조직도 > 사원정보목록</h2>
+                <div class="memeber_tbl">
+                    <table>
+                        <tr>
+                            <td>번호</td>
+                            <td>사원명</td>
+                            <td>채용형태</td>
+                            <td>희망직무</td>
+                            <td>생년월일</td>
+                            <td>C.P</td>
+                            <td>내서번호</td>
+                            <td>취미</td>
+                            <td>특기</td>
+                            <td>보훈대상</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td><strong>홍길동</strong></td>
+                            <td>영업1팀</td>
+                            <td>상임이사</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010-1234-5678</td>
+                            <td>부장 대리</td>
+                            <td><button type="" class="mod">수정</button>
+                                <button onClick="checkDelete()" type="" class="del">삭제</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>홍길동</td>
+                            <td>영업1팀</td>
+                            <td>상임이사</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010-1234-5678</td>
+                            <td>부장 대리</td>
+                            <td>X</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>홍길동</td>
+                            <td>영업1팀</td>
+                            <td>상임이사</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010-1234-5678</td>
+                            <td>부장 대리</td>
+                            <td>X</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>2</td>
+                            <td>홍길동</td>
+                            <td>영업1팀</td>
+                            <td>상임이사</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010-1234-5678</td>
+                            <td>부장 대리</td>
+                            <td>X</td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>홍길동</td>
+                            <td>영업1팀</td>
+                            <td>상임이사</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010-1234-5678</td>
+                            <td>부장 대리</td>
+                            <td>X</td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="page-grp">
+                    <span class="page"> <a href="#"> <i class="fas fa-angle-double-left"></i></i> </a> </span>
+                    <span class="page"> <a href="#"> <i class="fas fa-angle-left"></i> </a> </span>
+
+                    <span class="page active"> <a href="#"> 1 </a> </span>
+                    <span class="page"> <a href="#"> 2 </a> </span>
+                    <span class="page"> <a href="#"> 3 </a> </span>
+                    <span class="page"> <a href="#"> 4 </a> </span>
+                    <span class="page"> <a href="#"> 5 </a> </span>
+
+                    <span class="page"> <a href="#"> <i class="fas fa-angle-right"></i> </a> </span>
+                    <span class="page"> <a href="#"> <i class="fas fa-angle-double-right"></i></a> </span>
+                </div>
+
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+
     </div>
+
 </body>
+<script src="js/common.js"></script>
+
 </html>
