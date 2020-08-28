@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 메인 레이아웃</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .logo, .auth {
+            float:left;
+            padding:12px 0;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .logo {
+            width:15%;
+            text-align: center;
+            font-weight: 700;
+            font-size:18px;
+            text-transform: uppercase;
+        }
+
+        .auth {
+            width:85%;
+        }
+
+        .page-wrap {
+            background-color:#eee;
+            padding:5px;
+        }
+
+        .grade {
+            float:left;
+            font-size:18px;
+            font-weight: 700;
+        }
+
+        .logout {
+            float:right;
+            font-size:18px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <div class="logo">
+            <a href="#">Administrator</a>
+        </div>
+        <div class="auth">
+            <div class="grade">{Greenart - 접속권한(admin)}</div>
+            <div class="logout">
+                <a href="#">로그아웃</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

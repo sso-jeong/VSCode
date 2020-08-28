@@ -1,0 +1,242 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+.logo,
+.auth {
+    float: left;
+    padding: 12px 0;
+    background-color: #fff;
+
+}
+
+.clearfix {
+    clear: both;
+}
+
+.logo {
+    width: 15%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+
+
+}
+
+.auth {
+    width: 84.5%;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin-left: 0.5%;
+}
+
+.page-wrap {
+    background-color: #eee;
+    padding: 8px;
+}
+
+.grade {
+    float: left;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logout {
+    float: right;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.menu {
+    width: 15%;
+    height: 100vh;
+    float: left;
+    background-color: #fff;
+    padding: 10px 30px;
+    /* margin-right: 1%; */
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 2.5;
+
+}
+
+.main {
+    width: 84.5%;
+    float: left;
+    background-color: #fff;
+    margin-left: 0.5%;
+    padding: 10px 0 10px 10px;
+    border-radius: 3px;
+}
+
+.bottom {
+    margin-top: 8px;
+}
+
+tr {
+    text-align: center;
+}
+
+tr:first-child {
+    background-color: #6f809a;
+    color: #fff;
+}
+
+h2 {
+    color: tomato;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.uline {
+    height: 1px;
+    background-color: #eee;
+}
+
+tr {
+    height: 45px;
+}
+
+tr:nth-child(2n) {
+    background-color: #eee;
+}
+
+.member-tbl {
+    padding: 0 8px;
+}
+
+.mod {
+    width: 35px;
+    height: 25px;
+    background-color: #3f5ab5;
+    color: #fff;
+    font-size: 12px;
+
+}
+
+.del {
+    width: 35px;
+    height: 25px;
+    background-color: #d4d4d4;
+    font-size: 12px;
+}
+
+/* page css */
+.page-grp {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    /*line-height는 한 줄만 있을 때 사용*/
+    line-height: 35px;
+    border: 1px solid #ddd;
+
+}
+
+/* .page:hover {
+    cursor: pointer;
+    background-color: #3f5ab5;
+    color: #fff;
+    transition: 0.3s;
+} */
+
+.active {
+    cursor: pointer;
+    background-color: #3f5ab5;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* //page css */
+
+
+/* form css */
+.main-top {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    padding-bottom: 3px;
+}
+
+.title {
+    float: left;
+    padding: 0 8px;
+
+}
+
+.search-box {
+    float: right;
+    padding: 0 8px;
+}
+
+.sel {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.input {
+    width: 150px;
+    height: 30px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    padding: 0 4px;
+}
+
+.btn {
+    width: 70px;
+    height: 30px;
+    font-size: 12px;
+    background-color: #3f5ab5;
+    color: #fff;
+
+}
+
+td:nth-child(1) {
+    width: 10%;
+}
+
+td:nth-child(2) {
+    width: 10%;
+}
+
+td:nth-child(3) {
+    width: 10%;
+}
+
+td:nth-child(4) {
+    width: 10%;
+}
+
+td:nth-child(5) {
+    width: 10%;
+}
+
+td:nth-child(6) {
+    width: 10%;
+}
+
+td:nth-child(7) {
+    width: 10%;
+}
+
+td:nth-child(8) {
+    width: 10%;
+}
+
+td:nth-child(9) {
+    width: 10%;
+}
+
+td:nth-child(10) {
+    width: 10%;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 메인 레이아웃</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/935d75ad40.js" crossorigin="anonymous"></script>
+
+    <script>
+        function checkDelete(uid) {
+            var str = "사원정보가 삭제됩니다.\n삭제 후 자료는 복원할 수 없습니다.";
+            if (confirm(str)) { //에 버튼 클릭하면...
+                window.location.href = "memberDelete.do?uid=" + uid;
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="page-wrap">
+        <div class="top">
+            <div class="logo">
+                <a href="index.html">Administrator</a>
+            </div>
+
+            <div class="auth">
+                <div class="grade">{Greenart - 접속권한(admin)}</div>
+                <div class="logout">
+                    <a href="login.do">로그아웃</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="bottom">
+            <div class="menu">
+                <ol>
+                    <li><a href="">사내조직도</a></li>
+                    <li><a href="">전자결재</a></li>
+                    <li><a href="">게시판관리</a></li>
+                    <li><a href="">일정관리</a></li>
+                    <li><a href="">급여 및 상여금관리</a></li>
+                    <li><a href="">회사정보</a></li>
+                </ol>
+            </div>
+
+            <div class="main">
+
+                <div class="main-top">
+                    <div class="title">
+                        <h2>사내조직도 > 사원 정보목록</h2>
+                    </div>
+                    <div class="search-box">
+                        <form name="" method="post" action="">
+                            <select class="sel">
+                                <option value="">검색방법</option>
+                                <option value="">사번</option>
+                                <option value="">이름</option>
+                            </select>
+                            <input type="search" class="input" autofocus maxlength="10" tabindex="1" />
+                            <input type="search" class="input" maxlength="10" tabindex="2" />
+                            <button type="submit" class="btn">검색</button>
+                        </form>
+
+
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="member-tbl">
+                    <table>
+                        <tr>
+                            <td>번호</td>
+                            <td>사원명</td>
+                            <td>채용형태</td>
+                            <td>희망직무</td>
+                            <td>생년월일</td>
+                            <td>C.P</td>
+                            <td>내선번호</td>
+                            <td>취미</td>
+                            <td>특기</td>
+                            <td>비고</td>
+                        </tr>
+
+                        <tr>
+                            <td>10</td>
+                            <td><strong><u>
+                                        <a href="#">홍길동</a>
+                                    </u></strong></td>
+                            <td>영업1팀</td>
+                            <td>상임</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010.1234.5678</td>
+                            <td>부장대리</td>
+                            <td>
+                                <button type="" class="mod">수정</button>
+                                <button onClick="checkDelete('uid')" type="" class="del">삭제</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>9</td>
+                            <td>홍길동</td>
+                            <td>영업1팀</td>
+                            <td>상임</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010.1234.5678</td>
+                            <td>부장대리</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>홍길동</td>
+                            <td>영업1팀</td>
+                            <td>상임</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010.1234.5678</td>
+                            <td>부장대리</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>홍길동</td>
+                            <td>영업1팀</td>
+                            <td>상임</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010.1234.5678</td>
+                            <td>부장대리</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>홍길동</td>
+                            <td>영업1팀</td>
+                            <td>상임</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010.1234.5678</td>
+                            <td>부장대리</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>홍길동</td>
+                            <td>영업1팀</td>
+                            <td>상임</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010.1234.5678</td>
+                            <td>부장대리</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>홍길동</td>
+                            <td>영업1팀</td>
+                            <td>상임</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010.1234.5678</td>
+                            <td>부장대리</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>홍길동</td>
+                            <td>영업1팀</td>
+                            <td>상임</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010.1234.5678</td>
+                            <td>부장대리</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>홍길동</td>
+                            <td>영업1팀</td>
+                            <td>상임</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010.1234.5678</td>
+                            <td>부장대리</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>홍길동</td>
+                            <td>영업1팀</td>
+                            <td>상임</td>
+                            <td>부장</td>
+                            <td>-</td>
+                            <td>8</td>
+                            <td>010.1234.5678</td>
+                            <td>부장대리</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="page-grp">
+                    <span class="page"><i class="fas fa-angle-double-left"></i></span>
+                    <span class="page"><i class="fas fa-angle-left"></i></span>
+
+                    <span class="page active">1</span>
+                    <span class="page">2</span>
+                    <span class="page">3</span>
+                    <span class="page">4</span>
+                    <span class="page">5</span>
+
+                    <span class="page"><i class="fas fa-angle-right"></i></span>
+                    <span class="page"><i class="fas fa-angle-double-right"></i></span>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
