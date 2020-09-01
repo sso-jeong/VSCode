@@ -36,6 +36,15 @@ main {
     height: 40px;
 }
 
+.info div:nth-child(1) {
+    width: 200px;
+}
+
+.info div:nth-child(2) {
+    width: 60px;
+    text-align: center;
+}
+
 form {
     position: relative;
 }
@@ -66,10 +75,10 @@ form {
 
 .bell {
     position: relative;
-    margin-left: 10px;
 }
 
 .bell i {
+    cursor: pointer;
     font-size: 20px;
     color: rgba(255, 255, 255, 0.5);
 }
