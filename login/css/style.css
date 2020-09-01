@@ -12,11 +12,11 @@
     text-align: center;
 }
 
-.login-box  h1{
+.login-box h1 {
     font-size: 45px;
 }
 
-.login-box  h1::after{
+.login-box h1::after {
     content: '';
     display: block;
     width: 100%;
