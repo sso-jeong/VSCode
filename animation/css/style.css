@@ -1,0 +1,110 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&family=Merienda&display=swap');
+
+header {
+    font-family: 'Merienda', cursive;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 1600px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.page-top {
+    /* 내용물(div) 하나는 왼쪽, 하나는 오른쪽 배치*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    color: #fff;
+}
+
+.gnb ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gnb ul li {
+    margin-left: 80px;
+    color: #fff;
+}
+
+.gnb ul li a {
+    color: #fff;
+}
+
+.bg-wrap {
+    display: flex;
+    /* 세로로 배치 ( 무조건 높이 값이 있어야 함 ) */
+    align-items: center;
+    /* 가로로 배치  */
+    justify-content: center;
+    height: calc(100vh - 120px);
+}
+
+.bg-content {
+    color: #fff;
+    text-align: center;
+
+    opacity: 0;
+    animation: run 1s 0.5s forwards;
+    margin-top: 100px;
+}
+
+/********실행되기 전 opacity 0; ********/
+
+@keyframes run {
+    100% {
+        opacity: 1;
+        margin: 0;
+    }
+
+}
+
+/*************************************/
+
+.bg-content h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.bg-content h3 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.bg-content .btn {
+    border: 1px solid #f8c300;
+    background-color: #f8c300;
+    color: #fff;
+    padding: 20px 45px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Merienda', cursive;
+}
+
+.btn:hover {
+    border: 1px solid #f8c300;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+section {
+    height: 975px;
+    text-align: center;
+    font-size: 40px;
+}
+
+section:nth-child(2n) {
+    background-color: #eee;
+}
