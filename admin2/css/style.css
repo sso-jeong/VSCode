@@ -1,0 +1,336 @@
+@charset 'utf-8';
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #348cd4;
+}
+
+main {
+    width: 100%;
+    background-color: #fff;
+}
+
+.logo,
+.menu {
+    width: 15%;
+    float: left;
+}
+
+.logo h2 {
+    text-align: center;
+    line-height: 70px;
+}
+
+.logo h2 a {
+    color: #fff;
+}
+
+.auth,
+.main {
+    width: 85%;
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.menu {
+    border-right: 1px solid #e8e8e8;
+    height: 100vh;
+    padding: 30px 40px;
+}
+
+.menu h4 {
+    color: #3b424e;
+    font-size: 12px;
+}
+
+.main {
+    background-color: #eeefef;
+    height: 100vh;
+    padding: 20px 30px;
+}
+
+.main-top {
+    margin-top: 5px;
+}
+
+.main-top .welcome {
+    float: left;
+    color: #3b424e;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.main-top .sitemap {
+    float: right;
+    color: #3b424e;
+    font-weight: 400;
+}
+
+.main-panel {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.main-panel div {
+    width: 24%;
+    height: 200px;
+    border-radius: 2px;
+    padding: 20px;
+}
+
+.main-content div {
+    width: 32.5%;
+    height: 300px;
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 2px solid #e8e8e8;
+    border-bottom: 2px solid #e8e8e8;
+}
+
+.main-panel .member {
+    background-color: #8892d6;
+}
+
+.main-panel .article {
+    background-color: #45bbe0;
+}
+
+.main-panel .download {
+    background-color: #f06292;
+}
+
+.main-panel .request {
+    background-color: #78c350;
+}
+
+.menu ul {
+    margin-top: 30px;
+}
+
+.menu ul li {
+    line-height: 3;
+}
+
+.menu ul li:first-child a {
+    color: #7ab3e1;
+    font-weight: 500;
+}
+
+.menu ul li a {
+    color: #333;
+}
+
+.menu .icon {
+    margin-right: 10px;
+}
+
+.menu .icon i {
+    color: #7ab3e1;
+}
+
+
+.submenu {
+    width: 100%;
+    height: 250px;
+    background-color: rgba(255, 255, 255, .9);
+    padding: 20px 30px;
+
+    position: absolute;
+
+    z-index: 9999;
+
+    display: none;
+}
+
+.info {
+    display: flex;
+    justify-content: flex-end;
+    /* 가로배치 */
+    align-items: center;
+    /* 세로배치(높이값) */
+    height: 70px;
+}
+
+.info>div {
+    margin-right: 30px;
+}
+
+.search {
+    width: 200px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+}
+
+form {
+    position: relative;
+}
+
+.zoom {
+    position: absolute;
+    top: 50%;
+    /* 세로 가운데 배치 */
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.zoom i {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.msg {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f00;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+
+    position: absolute;
+    top: -20px;
+    right: -10px;
+}
+
+.bell i {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.bell {
+    position: relative;
+}
+
+.pic-wrap .user img {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.bar {
+    display: none;
+}
+
+/* .pic i {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.5);
+} */
+
+
+
+@media (max-width:800px) {
+
+    .logo,
+    .menu {
+        width: 100%;
+        float: none;
+    }
+
+    .auth,
+    .main {
+        width: 100%;
+        float: none;
+    }
+
+
+    .menu {
+        display: none;
+    }
+
+
+    .main {
+        background-color: #eeefef;
+        /* 내용물 높이만큼 세로 */
+        height: auto;
+        padding: 20px 30px;
+    }
+
+    .auth {
+        display: none;
+    }
+
+
+    .main-panel {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .main-content {
+        display: block;
+        margin-top: 20px;
+    }
+
+
+    .main-panel div {
+        width: 100%;
+        border-radius: 2px;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .main-content div {
+        width: 100%;
+        height: 300px;
+        border-radius: 2px;
+        background-color: #fff;
+        padding: 20px;
+        border-right: 2px solid #e8e8e8;
+        border-bottom: 2px solid #e8e8e8;
+        margin-top: 20px;
+    }
+
+    .logo {
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo h2 {
+        text-align: left;
+    }
+
+    .logo .bar a {
+        color: #fff;
+        font-size: 30px;
+    }
+
+    .bar {
+        line-height: 70px;
+        display: inline-block;
+    }
+
+    .submenu {
+        width: 100%;
+        height: 250px;
+        background-color: rgba(255, 255, 255, .9);
+        padding: 20px 30px;
+
+        position: absolute;
+
+        z-index: 9999;
+
+        display: none;
+    }
+
+
+}
