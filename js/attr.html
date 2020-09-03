@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 속성을 변경하는 attr 메소드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $(".btn").click(function () {
+                $("#siteUrl").html("네이버 사이트로 이동");
+                $("#siteUrl").attr({
+                    "href": "https://www.naver.com",
+                    "title": "네이버로 이동"
+                });
+                //$("#siteUrl").attr("href", "https://www.naver.com");
+                //$("#siteUrl").attr("title", "네이버로 이동");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <a href="https://www.daum.net" alt="" title="다음으로 이동" target="_blank" id="siteUrl">다음 사이트로 이동</a>
+    <button class="btn">사이트변경</button>
+</body>
+
+</html>
