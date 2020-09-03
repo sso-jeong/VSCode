@@ -1,7 +1,4 @@
-<!-- 1. click(), this, hide
-2. show() & hide() -->
-
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,11 +7,11 @@
     <title>click() & this & hide() </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-     실제 작업 시 아래쪽에 만들어야 함 
+    <!-- 실제 작업 시 아래쪽에 만들어야 함  -->
     <script>
         $(function () {
             $("p").click(function () {
-                같은 클래스 이름을 사용할 때 p를 구분해줌 + 같은 이름을 가지고 있는 현재 클릭하려는 그것
+                // 같은 클래스 이름을 사용할 때 p를 구분해줌 + 같은 이름을 가지고 있는 현재 클릭하려는 그것
                 $(this).hide();
             });
         });
@@ -26,67 +23,6 @@
     <p class="press">여기를 누르세요 1번</p>
     <p class="press">여기를 누르세요 2번</p>
     <p class="press">여기를 누르세요 3번</p>
-</body>
-
-</html> -->
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>show() & hide() </title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <style>
-        .content {
-            border: 1px solid #ccc;
-            padding: 20px;
-        }
-
-        .btn {
-            border: 0;
-            outline: 0;
-            border: 1px solid #ccc;
-            padding: 4px 6px;
-            background-color: #fff;
-        }
-
-        .btn-grp {
-            margin-bottom: 10px;
-        }
-    </style>
-
-    <script>
-        $(function () {
-            $("#hide").click(function () {
-                $(".content").hide();
-            });
-
-            $("#show").click(function () {
-                $(".content").show();
-            });
-
-            $("#toggle").click(function () {
-                // $(".content").fadeToggle(2000);
-                $(".content").toggle();
-            });
-        });
-    </script>
-</head>
-
-<body>
-    <div class="btn-grp">
-        <button id="hide" class="btn">숨김</button>
-        <button id="show" class="btn">보기</button>
-        <button id="toggle" class="btn">토글</button>
-    </div>
-
-    <div class="content">
-        Hide 버튼을 누르면 숨겨지고 Show 버튼을 누르면 보입니다.
-    </div>
-
 </body>
 
 </html>
