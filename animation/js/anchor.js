@@ -14,3 +14,24 @@ $(function () {
         e.preventDefault();
     });
 });
+
+$(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 700) {
+            $(".up i").fadeIn(200);
+        } else {
+            $(".up i").fadeOut(200);
+        }
+
+    });
+});
+
+$(function () {
+    $(".up i").click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 100);
+
+    });
+
+});
