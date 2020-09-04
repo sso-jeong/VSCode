@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window, scrollTop, offset, position</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        nav {
+            background-color: #333;
+            width: 100%;
+            padding: 10px 10px;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            list-style: none;
+            color: #fff;
+            margin-right: 30px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        h1 {
+            height: 200px;
+        }
+
+        main {
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Position - relative, absolute, fixed, static</h1>
+        <nav>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quae ea corrupti modi vel. Numquam ipsa sequi
+        cum nesciunt deserunt minima modi animi quis dolorem veniam, nemo perferendis accusamus harum repellendus
+        consectetur delectus labore, similique quae qui molestias pariatur autem eveniet non? Beatae reprehenderit
+        cupiditate, voluptate repellendus ratione mollitia illum soluta, aperiam hic maxime voluptatibus nihil fugit
+        vitae non autem quam illo consequatur nesciunt at. Fuga molestiae quibusdam porro ipsam dignissimos, quaerat
+        recusandae accusamus quisquam. Laboriosam eius molestias excepturi deserunt, animi officiis. Minus harum ex ut
+        modi. Sit nemo deserunt consequuntur rem! Sapiente iste facere dolore nostrum suscipit exercitationem soluta.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quae ea corrupti modi vel. Numquam ipsa sequi
+        cum nesciunt deserunt minima modi animi quis dolorem veniam, nemo perferendis accusamus harum repellendus
+        consectetur delectus labore, similique quae qui molestias pariatur autem eveniet non? Beatae reprehenderit
+        cupiditate, voluptate repellendus ratione mollitia illum soluta, aperiam hic maxime voluptatibus nihil fugit
+        vitae non autem quam illo consequatur nesciunt at. Fuga molestiae quibusdam porro ipsam dignissimos, quaerat
+        recusandae accusamus quisquam. Laboriosam eius molestias excepturi deserunt, animi officiis. Minus harum ex ut
+        modi. Sit nemo deserunt consequuntur rem! Sapiente iste facere dolore nostrum suscipit exercitationem soluta.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quae ea corrupti modi vel. Numquam ipsa sequi
+        cum nesciunt deserunt minima modi animi quis dolorem veniam, nemo perferendis accusamus harum repellendus
+        consectetur delectus labore, similique quae qui molestias pariatur autem eveniet non? Beatae reprehenderit
+        cupiditate, voluptate repellendus ratione mollitia illum soluta, aperiam hic maxime voluptatibus nihil fugit
+        vitae non autem quam illo consequatur nesciunt at. Fuga molestiae quibusdam porro ipsam dignissimos, quaerat
+        recusandae accusamus quisquam. Laboriosam eius molestias excepturi deserunt, animi officiis. Minus harum ex ut
+        modi. Sit nemo deserunt consequuntur rem! Sapiente iste facere dolore nostrum suscipit exercitationem soluta.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quae ea corrupti modi vel. Numquam ipsa sequi
+        cum nesciunt deserunt minima modi animi quis dolorem veniam, nemo perferendis accusamus harum repellendus
+        consectetur delectus labore, similique quae qui molestias pariatur autem eveniet non? Beatae reprehenderit
+        cupiditate, voluptate repellendus ratione mollitia illum soluta, aperiam hic maxime voluptatibus nihil fugit
+        vitae non autem quam illo consequatur nesciunt at. Fuga molestiae quibusdam porro ipsam dignissimos, quaerat
+        recusandae accusamus quisquam. Laboriosam eius molestias excepturi deserunt, animi officiis. Minus harum ex ut
+        modi. Sit nemo deserunt consequuntur rem! Sapiente iste facere dolore nostrum suscipit exercitationem soluta.
+    </main>
+</body>
+<script>
+    $(function () {
+        var navTop = $("nav").offset().top;
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > navTop) {
+                $("nav").css({
+                    position: "fixed",
+                    top: "0px",
+                    left: "0px"
+
+                });
+
+            } else {
+                $("nav").css({
+                    position: "static"
+                });
+            }
+        });
+
+    });
+</script>
+
+</html>
