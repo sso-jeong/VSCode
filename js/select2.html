@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 before, after-형제(siblings), parent, children()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, #3d4258, #6670a0, #9688b4);
+        }
+    </style>
+    <!-- <script>
+        $(function () {
+            $(".parent").children().css({
+                "border": "3px solid #f00",
+                "color": "#00f"
+            });
+        });
+    </script> -->
+</head>
+
+<body>
+    <!-- <div class="parent">
+        <p>Son</p>
+        <span>grandChild</span>
+    </div>
+    <div class="parent">
+
+    </div> -->
+
+    <div class="accordion">
+        <div class="accordion-header">Accordion menu1</div>
+        <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magni odio eveniet,
+            voluptatum assumenda quas illo veniam sapiente saepe, voluptatibus, totam corrupti esse quia ullam sit
+            neque? Facilis, veniam labore.</div>
+
+        <div class="accordion-header">Accordion menu1</div>
+        <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magni odio eveniet,
+            voluptatum assumenda quas illo veniam sapiente saepe, voluptatibus, totam corrupti esse quia ullam sit
+            neque? Facilis, veniam labore.</div>
+
+        <div class="accordion-header">Accordion menu1</div>
+        <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magni odio eveniet,
+            voluptatum assumenda quas illo veniam sapiente saepe, voluptatibus, totam corrupti esse quia ullam sit
+            neque? Facilis, veniam labore.</div>
+
+    </div>
+</body>
+
+</html>
