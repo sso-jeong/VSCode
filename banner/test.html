@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #topMenu {
+            height: 30px;
+            width: 100%;
+            /* [변경] 하위 메뉴와 동일하게 맞춤 */
+            position: relative;
+
+
+            background-color: #2D2D2D;
+            /* [추가] 늘어난만큼 배경색도 보이도록 수정 */
+        }
+
+        #topMenu ul {
+            /* 메인 메뉴 안의 ul을 설정함: 상위메뉴의 ul+하위 메뉴의 ul */
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #topMenu ul li {
+            /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
+            color: white;
+            background-color: #2d2d2d;
+            float: left;
+            line-height: 30px;
+            vertical-align: middle;
+            text-align: center;
+            -position: relative;
+        }
+
+        .menuLink,
+        .submenuLink {
+            /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
+            text-decoration: none;
+            display: block;
+            width: 150px;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: "Trebuchet MS", Dotum;
+        }
+
+        .menuLink {
+            /* 상위 메뉴의 글씨색을 흰색으로 설정 */
+            color: white;
+        }
+
+        .topMenuLi:hover .menuLink {
+            /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
+            color: red;
+            background-color: #4d4d4d;
+        }
+
+  
+
+        .submenuLink {
+            /* 하위 메뉴의 a 태그 스타일 설정 */
+            color: #2d2d2d;
+            background-color: #DDD;
+            /* [변경] 배경색 변경 */
+            -border: solid 1px black;
+            /* [삭제] 테두리 삭제 */
+            -margin-right: -1px;
+            /* [삭제] 공백 보정 삭제 */
+        }
+
+        .submenu {
+            /* 하위 메뉴 스타일 설정 */
+            position: absolute;
+            height: 0px;
+            overflow: hidden;
+            transition: height .2s;
+            -webkit-transition: height .2s;
+            -moz-transition: height .2s;
+            -o-transition: height .2s;
+            width: 100%;
+            left: 0;
+
+
+            background-color: #DDD;
+            /* [추가] 하위 메뉴 전체에 배경색 설정 */
+        }
+
+        .submenu li {
+            display: inline-block;
+
+
+        }
+
+        .topMenuLi:hover .submenu {
+            height: 32px;
+        }
+
+        .submenuLink:hover {
+            color: red;
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="topMenu">
+        <ul>
+            <li class="topMenuLi"> <a class="menuLink"
+                    href="http://unikys.tistory.com/category/Programming%20Lecture">LECTURES</a>
+                <ul class="submenu">
+                    <li><a href="http://unikys.tistory.com/category/Programming%20Lecture/%EC%86%8D%EA%B9%8A%EC%9D%80%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B0%95%EC%A2%8C"
+                            class="submenuLink longLink">속깊은 자바스크립트 강좌</a></li>
+                    <li><a href="http://unikys.tistory.com/category/Programming%20Lecture/%EB%B0%91%EB%B0%94%EB%8B%A5%EB%B6%80%ED%84%B0%20%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%A7%8C%EB%93%A4%EA%B8%B0"
+                            class="submenuLink longLink">밑바닥부터 홈페이지 만들기</a></li>
+                    <li><a href="http://unikys.tistory.com/category/Programming%20Lecture/Android%28%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%29%20%EC%95%B1%20%EA%B0%9C%EB%B0%9C"
+                            class="submenuLink longLink">안드로이드 앱 개발</a></li>
+                </ul>
+            </li>
+            <li>|</li>
+            <li class="topMenuLi"> <a class="menuLink"
+                    href="http://unikys.tistory.com/category/Programming%20Lecture">LECTURES</a>
+                <ul class="submenu">
+                    <li><a href="http://unikys.tistory.com/category/Programming%20Lecture/%EC%86%8D%EA%B9%8A%EC%9D%80%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B0%95%EC%A2%8C"
+                            class="submenuLink longLink">속깊은 자바스크립트 강좌</a></li>
+                    <li><a href="http://unikys.tistory.com/category/Programming%20Lecture/%EB%B0%91%EB%B0%94%EB%8B%A5%EB%B6%80%ED%84%B0%20%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%A7%8C%EB%93%A4%EA%B8%B0"
+                            class="submenuLink longLink">밑바닥부터 홈페이지 만들기</a></li>
+                    <li><a href="http://unikys.tistory.com/category/Programming%20Lecture/Android%28%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%29%20%EC%95%B1%20%EA%B0%9C%EB%B0%9C"
+                            class="submenuLink longLink">안드로이드 앱 개발</a></li>
+                </ul>
+            </li>
+            <li class="topMenuLi"> <a class="menuLink"
+                    href="http://unikys.tistory.com/category/Programming%20Lecture">LECTURES</a>
+                <ul class="submenu">
+                    <li><a href="http://unikys.tistory.com/category/Programming%20Lecture/%EC%86%8D%EA%B9%8A%EC%9D%80%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B0%95%EC%A2%8C"
+                            class="submenuLink longLink">속깊은 자바스크립트 강좌</a></li>
+                    <li><a href="http://unikys.tistory.com/category/Programming%20Lecture/%EB%B0%91%EB%B0%94%EB%8B%A5%EB%B6%80%ED%84%B0%20%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%A7%8C%EB%93%A4%EA%B8%B0"
+                            class="submenuLink longLink">밑바닥부터 홈페이지 만들기</a></li>
+                    <li><a href="http://unikys.tistory.com/category/Programming%20Lecture/Android%28%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C%29%20%EC%95%B1%20%EA%B0%9C%EB%B0%9C"
+                            class="submenuLink longLink">안드로이드 앱 개발</a></li>
+                </ul>
+            </li>
+            <li class="topMenuLi"> <a class="menuLink" href="http://unikys.tistory.com/guestbook">GUEST BOOK</a> </li>
+            <li>|</li>
+            <li class="topMenuLi"> <a class="menuLink" href="http://unikys.tistory.com/tag">TAG CLOUD</a>
+                <ul class="submenu">
+                    <li><a href="http://unikys.tistory.com/tag/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8"
+                            class="submenuLink">자바스크립트</a></li>
+                    <li><a href="http://unikys.tistory.com/tag/%EA%B0%95%EC%A2%8C" class="submenuLink">강좌</a></li>
+                    <li><a href="http://unikys.tistory.com/tag/K100D" class="submenuLink">K100D</a></li>
+                </ul>
+            </li>
+            <li>|</li>
+            <li class="topMenuLi"> <a class="menuLink" href="http://unikys.tistory.com/media">MEDIA LOG </li>
+            <li>|</li>
+            <li class="topMenuLi"> <a class="menuLink" href="http://unikys.tistory.com/location">LOCATION LOG</a> </li>
+        </ul>
+    </nav>
+</body>
+
+</html>
