@@ -245,6 +245,14 @@ select {
     height: 35px;
 }
 
+.sel-attend {
+    font-size: 12px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 65px;
+    height: 30px;
+}
+
 .sel-55 {
     font-size: 12px;
     border-radius: 2px;
