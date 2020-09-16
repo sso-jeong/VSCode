@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN GROUPWARE SYSTEM</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/jquery.treeview.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/board.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.treeview.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+    <style>
+        tr:first-child {
+            background-color: #6f809a;
+        }
+
+        .tr-even {
+            background-color: #eff3f9;
+        }
+
+        .arrow i {
+            font-size: 25px;
+            color: #6f809a;
+        }
+
+        .cal {
+            display: inline-block;
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+            color: #6f809a;
+            font-weight: 700;
+            font-family: 'Noto Sans KR', sans-serif;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrap bg-gray">
+        <div class="container p10">
+            <div class="page-main-wrap flex flex-justify">
+                <div class="page-left bg-white height40">
+                    <h2 class="noto center font18">관리자페이지</h2>
+                </div>
+                <div class="page-right bg-white height40">
+                    <div class="page-info flex flex-justify">
+                        <div class="auth">
+                            <span class="noto font16 weight700">{그린컴퓨터 - 접속권한 9등급}</span>
+                        </div>
+                        <div class="logout">
+                            <a href="grp_login.html" class="noto font16 weight700">{로그아웃}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-main-wrap flex flex-justify m-t10">
+                <div class="page-left bg-white p10">
+                    <div class="tree-wrap">
+                        <div id="sidetreecontrol" class="">
+                            <a href="#" class="tab active" id="open">전체닫기</a>
+                            <a href="#" class="tab" id="close">전체열기</a>
+                        </div>
+                        <div class="clearfix"></div>
+                        <ul id="tree" class="">
+                            <li>
+                                <img src="images/folder-closed.gif" /> 사내조직/연락처
+                                <ul>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_member_list.html">사원목록</a></li>
+                                    <li><img src="images/folder.gif" /> 2. <a href="grp_member_register.html">사원등록</a>
+                                    </li>
+                                    <li><img src="images/folder.gif" /> 3. <a href="grp_member_chart.html">조직도</a></li>
+                                    <li><img src="images/folder.gif" /> 4. <a href="grp_member_chart_register.html">조직도
+                                            등록</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <img src="images/folder-closed.gif" /> 전자결재
+                                <ul>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_approval_main.html"
+                                            target="_blank">전자결재
+                                            문서등록</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <img src="images/folder-closed.gif" /> 게시판관리
+                                <ul>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_board_create.html">게시판 생성</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <img src="images/folder-closed.gif" /> 일정관리
+                                <ul>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_calendar_list.html">일정목록</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <img src="images/folder-closed.gif" /> 근태관리
+                                <ul>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_attend_info.html">내 근태현황</a>
+                                    </li>
+                                    <li><img src="images/folder.gif" /> 2. <a href="grp_my_info.html">내 인사정보</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <img src="images/folder-closed.gif" /> 설문조사
+                                <ul>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_survey_open.html">진행중인 설문</a>
+                                    </li>
+                                    <li><img src="images/folder.gif" /> 2. <a href="grp_survey_close.html">종료된 설문</a>
+                                    </li>
+                                    <li><img src="images/folder.gif" /> 3. <a href="#">내가 만든 설문</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <img src="images/folder-closed.gif" /> 자료실
+                                <ul>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_file_upload.html">문서양식</a></li>
+                                    <li><img src="images/folder.gif" /> 2. <a href="grp_file_upload.html">제품소개서</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <img src="images/folder-closed.gif" /> 회사기본정보
+                                <ul>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_company_info.html">회사기본정보</a>
+                                    </li>
+                                    <li><img src="images/folder.gif" /> 2. <a
+                                            href="grp_compnay_info_register.html">회사기본정보 등록</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page-right bg-white p10">
+                    <div class="page-main-wrap">
+                        <div class="page-member-top flex flex-justify">
+                            <div class="">
+                            </div>
+                            <div class="">
+                            </div>
+                        </div>
+                        <div class="title">
+                            <h3 class="tomato font18 noto m-t20">
+                                <i class="fas fa-feather-alt"></i> 근태관리 > 1. 내 근태현황
+                            </h3>
+                        </div>
+                        <div class="page-member-bottom">
+                            <div class="page-content">
+                                <div class="m-t20 m-b5">
+                                    <span class="arrow">
+                                        <a href="#">
+                                            <i class="fas fa-chevron-left"></i>2020년 9월
+                                        </a>
+                                    </span>
+                                    <span class="arrow">
+                                        <a href="#">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                                <table>
+                                    <tr class="weight700 center tr-color f6 font14 under">
+                                        <td class="td-10">일자</td>
+                                        <td class="td-10">업무시작</td>
+                                        <td class="td-10">업무종료</td>
+                                        <td class="td-10">총 근무시간</td>
+                                        <td>근무시간 상세보기</td>
+                                        <td class="td-10">승인내역</td>
+                                    </tr>
+                                    <tr class="center font14">
+                                        <td>2020.09.16</td>
+                                        <td>09:00:00</td>
+                                        <td>18:20:00</td>
+                                        <td>09h 20m 00s</td>
+                                        <td>정규 09h 00m 00s / 야근 00h 20m 00s</td>
+                                        <td>승인완료</td>
+                                    </tr>
+                                    <tr class="center font14">
+                                        <td>2020.09.16</td>
+                                        <td>09:00:00</td>
+                                        <td>18:20:00</td>
+                                        <td>09h 20m 00s</td>
+                                        <td>정규 09h 00m 00s / 야근 00h 20m 00s</td>
+                                        <td>승인완료</td>
+                                    </tr>
+                                    <tr class="center font14">
+                                        <td>2020.09.16</td>
+                                        <td>09:00:00</td>
+                                        <td>18:20:00</td>
+                                        <td>09h 20m 00s</td>
+                                        <td>정규 09h 00m 00s / 야근 00h 20m 00s</td>
+                                        <td>승인완료</td>
+                                    </tr>
+                                    <tr class="center font14">
+                                        <td>2020.09.16</td>
+                                        <td>09:00:00</td>
+                                        <td>18:20:00</td>
+                                        <td>09h 20m 00s</td>
+                                        <td>정규 09h 00m 00s / 야근 00h 20m 00s</td>
+                                        <td>승인완료</td>
+                                    </tr>
+                                </table>
+                                <div class="sum m-t5" style="text-align: right;">
+                                    <span class="noto font16">
+                                        - 전체근무 시간 : <strong>50h 00m 00s</strong>
+                                        - 정규근무 시간 : <strong>45h 00m 00s</strong>
+                                        - 초과근무 시간 : <strong>05h 00m 00s</strong>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/treeview.js"></script>
+<script src="js/tab.js"></script>
+<script>
+    $(function () {
+        $("tr:nth-child(2n+1)").addClass("tr-even");
+    })
+</script>
+
+</html>

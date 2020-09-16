@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN GROUPWARE SYSTEM</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/jquery.treeview.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/board.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.treeview.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+    <style>
+        tr:first-child {
+            background-color: #6f809a;
+        }
+
+        .tr-even {
+            background-color: #eff3f9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrap bg-gray">
+        <div class="container p10">
+            <div class="page-main-wrap flex flex-justify">
+                <div class="page-left bg-white height40">
+                    <h2 class="noto center font18">관리자페이지</h2>
+                </div>
+                <div class="page-right bg-white height40">
+                    <div class="page-info flex flex-justify">
+                        <div class="auth">
+                            <span class="noto font16 weight700">{그린컴퓨터 - 접속권한 9등급}</span>
+                        </div>
+                        <div class="logout">
+                            <a href="grp_login.html" class="noto font16 weight700">{로그아웃}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-main-wrap flex flex-justify m-t10">
+                <div class="page-left bg-white p10">
+                    <div class="tree-wrap">
+                        <div id="sidetreecontrol" class="">
+                            <a href="#" class="tab active" id="open">전체닫기</a>
+                            <a href="#" class="tab" id="close">전체열기</a>
+                        </div>
+                        <div class="clearfix"></div>
+                        <ul id="tree" class="">
+                            <li>
+                                <img src="images/folder-closed.gif" /> 결재하기
+                                <ul>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_approval_ready.html">결재 대기
+                                            문서</a></li>
+                                    <li><img src="images/folder.gif" /> 2. <a href="grp_approval_status.html">결재 문서
+                                            상태</a>
+                                    </li>
+                                    <li><img src="images/folder.gif" /> 3. <a href="grp_approval_ref.html">참조/열람 대기
+                                            문서</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <img src="images/folder-closed.gif" /> 개인문서함
+                                <ul>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_approval_send_save.html">발송
+                                            문서함</a></li>
+                                    <li><img src="images/folder.gif" /> 2. <a href="grp_approval_receive_save.html">수신
+                                            문서함</a>
+                                    </li>
+                                    <li><img src="images/folder.gif" /> 3. <a href="grp_approval_ref_save.html">참조/열람
+                                            문서함</a></li>
+                                    <li><img src="images/folder.gif" /> 3. <a href="grp_approval_temp_save.html">임시 보관
+                                            문서함</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <img src="images/folder-closed.gif" /> 문서양식함
+                                <ul>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_approval_hr_form.html">인사부</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <img src="images/folder-closed.gif" /> 결재환경설정
+                                <ul>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_approval_sign.html">기본설정</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page-right bg-white p10">
+                    <div class="page-main-wrap">
+                        <div class="page-member-top flex flex-justify">
+                            <div class="">
+                            </div>
+                            <div class="">
+                            </div>
+                        </div>
+                        <div class="title">
+                            <h3 class="tomato font18 noto m-t20">
+                                <i class="fas fa-feather-alt"></i> 사원조직/연락처 > 1. 사원목록
+                            </h3>
+                        </div>
+                        <div class="page-member-bottom">
+                            <div class="page-content">
+
+                                <div class="page-grp center m-t10">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/treeview.js"></script>
+<script src="js/tab.js"></script>
+<script>
+    $(function () {
+        $("tr:nth-child(2n+1)").addClass("tr-even");
+    })
+</script>
+
+</html>
