@@ -1,7 +1,7 @@
-$(function () {
+$(function() {
     $("#tree").treeview({
         collapsed: false,
-        animated: 0,
+        animated:0,
         control: "#sidetreecontrol",
         persist: "location"
     });

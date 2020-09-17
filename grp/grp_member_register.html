@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="css/jquery.treeview.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/board.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/jquery.treeview.js"></script>
-    <script src="ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
     <style>
         .member-left {
+            /* 사진 */
             width: 11%;
             max-width: 192px;
         }
@@ -35,6 +35,7 @@
             max-width: 1728px;
         }
     </style>
+    <script src="ckeditor/ckeditor.js"></script>
 </head>
 
 <body>
@@ -105,32 +106,25 @@
                             <li>
                                 <img src="images/folder-closed.gif" /> 근태관리
                                 <ul>
-                                    <li><img src="images/folder.gif" /> 1. <a href="#">내 근태현황</a>
-                                    </li>
-                                    <li><img src="images/folder.gif" /> 2. <a href="#">내 인사정보</a>
-                                    </li>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_attend_info.html">내 근태현황</a></li>
+                                    <li><img src="images/folder.gif" /> 2. <a href="grp_my_info.html">내 인사정보</a></li>
                                 </ul>
                             </li>
 
                             <li>
                                 <img src="images/folder-closed.gif" /> 설문조사
                                 <ul>
-                                    <li><img src="images/folder.gif" /> 1. <a href="grp_survey_open.html">진행중인 설문</a>
-                                    </li>
-                                    <li><img src="images/folder.gif" /> 2. <a href="grp_survey_close.html">종료된 설문</a>
-                                    </li>
-                                    <li><img src="images/folder.gif" /> 3. <a href="#">내가 만든 설문</a>
-                                    </li>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_survey_open.html">진행중인 설문</a></li>
+                                    <li><img src="images/folder.gif" /> 2. <a href="grp_survey_close.html">종료된 설문</a></li>
+                                    <li><img src="images/folder.gif" /> 3. <a href="#">내가 만든 설문</a></li>
                                 </ul>
                             </li>
 
                             <li>
                                 <img src="images/folder-closed.gif" /> 자료실
                                 <ul>
-                                    <li><img src="images/folder.gif" /> 1. <a href="#">문서양식</a>
-                                    </li>
-                                    <li><img src="images/folder.gif" /> 2. <a href="#">제품소개서</a>
-                                    </li>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_file_upload.html">문서양식</a></li>
+                                    <li><img src="images/folder.gif" /> 2. <a href="grp_file_upload.html">제품소개서</a></li>
                                 </ul>
                             </li>
 
@@ -187,35 +181,38 @@
                                                         </select>
                                                     </td>
                                                     <td class="td-7 center under bg-gray weight700">생년월일</td>
-                                                    <td class="td-13 p-lr3"> <input type="text" name="" id=""
-                                                            class="input-75" autofocus />
+                                                    <td class="td-13 p-lr3">
+                                                        <input type="text" name="" id="" class="input-75" autofocus />
                                                         <select name="" class="sel-55" id="">
-                                                            <option value="">앙력</option>
+                                                            <option value="">양력</option>
                                                             <option value="">음력</option>
-                                                        </select></td>
+                                                        </select>
+                                                    </td>
                                                     <td class="td-7 center under bg-gray weight700">C.P</td>
                                                     <td class="td-13 p-lr3">
                                                         <select name="" class="sel-55" id="">
                                                             <option value="">010</option>
+                                                            <option value="">011</option>
                                                         </select>
-                                                        <input type="text" name="" id="" class="input-75" />
+                                                        <input type="text" name="" id="" class="input-75" autofocus />
                                                     </td>
-                                                    <td class="td-7 center under bg-gray weight700">Tel</td>
+                                                    <td class="td-7 center under bg-gray weight700">Tel.</td>
                                                     <td class="td-13 p-lr3">
                                                         <select name="" class="sel-55" id="">
                                                             <option value="">02</option>
                                                             <option value="">051</option>
                                                         </select>
-                                                        <input type="text" name="" id="" class="input-75" />
+                                                        <input type="text" name="" id="" class="input-75" autofocus />
                                                     </td>
                                                     <td class="td-7 center under bg-gray weight700">내선번호</td>
                                                     <td class="td-13 p-lr3">
                                                         <select name="" class="sel-55" id="">
-                                                            <option value="">070</option>
+                                                            <option value="">02</option>
                                                             <option value="">051</option>
                                                         </select>
-                                                        <input type="text" name="" id="" class="input-75" />
+                                                        <input type="text" name="" id="" class="input-75" autofocus />
                                                     </td>
+                                                </tr>
                                                 <tr>
                                                     <td class="td-7 center under bg-gray weight700">채용형태</td>
                                                     <td class="td-13 p-lr3">
@@ -241,7 +238,6 @@
                                                         <select name="" class="sel-135" id="">
                                                             <option value="">병역필</option>
                                                             <option value="">병역미필</option>
-                                                            <option value="">무관</option>
                                                         </select>
                                                     </td>
                                                     <td class="td-7 center under bg-gray weight700">종교</td>
@@ -250,7 +246,6 @@
                                                             <option value="">무교</option>
                                                             <option value="">불교</option>
                                                             <option value="">기독교</option>
-                                                            <option value="">천주교</option>
                                                         </select>
                                                     </td>
                                                 </tr>
@@ -266,8 +261,8 @@
                                                     <td class="td-7 center under bg-gray weight700">장애여부</td>
                                                     <td class="td-13 p-lr3">
                                                         <select name="" class="sel-135" id="">
-                                                            <option value="">비대상</option>
-                                                            <option value="">대상</option>
+                                                            <option value="">비장애</option>
+                                                            <option value="">장애</option>
                                                         </select>
                                                     </td>
                                                     <td class="td-7 center under bg-gray weight700">보훈대상여부</td>
@@ -376,7 +371,6 @@
                                                         <input type="text" name="" id="" class="input-135" />
                                                     </td>
                                                 </tr>
-                                                </tr>
                                             </table>
                                         </div>
                                     </div>
@@ -387,7 +381,7 @@
                                             </h3>
                                         </div>
                                         <div class="content">
-                                            <textarea name="editor"
+                                            <textarea id="editor" name=""
                                                 style="border:1px solid #ccc;padding:10px;border-radius: 2px;"
                                                 class="noto"></textarea>
                                             <script>
@@ -396,12 +390,12 @@
                                             </script>
                                         </div>
                                     </div>
+
                                     <div class="btn-grp center m-t10">
-                                        <button type="submit" class="btn-normal">내용저장</button>
+                                        <button type="submit" class="btn-normal">내용저장</button>                        
                                         <button type="reset" class="btn-red">새로고침</button>
                                     </div>
                                 </form>
-
                             </div>
                         </div>
                     </div>
@@ -412,10 +406,5 @@
 </body>
 <script src="js/treeview.js"></script>
 <script src="js/tab.js"></script>
-<script>
-    $(function () {
-        $("tr:nth-child(2n+1)").addClass("tr-even");
-    })
-</script>
 
 </html>

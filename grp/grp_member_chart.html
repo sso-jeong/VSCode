@@ -9,35 +9,35 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/jquery.treeview.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/jquery.orgchart.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="css/jquery.orgchart.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/jquery.treeview.js"></script>
     <script src="js/jquery.orgchart.js"></script>
-    <script src="js/tab.js"></script>
     <style>
         .orgchart .top-level .title {
-            background-color: #f1801f;
+            background-color:#f1801f;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
         }
 
         .orgchart .high-level .title {
-            background-color: #777;
-            color: #fff;
+            background-color:#777;
+            color:#fff;
         }
 
         .orgchart .middle-level .title {
-            background-color: #bcbcbc;
+            background-color:#bcbcbc;
         }
 
         .orgchart .low-level .title {
-            background-color: #e0e0e0;
+            background-color:#e0e0e0;
         }
 
         .orgchart .bottom-level .title {
-            background-color: #f0f0f0;
+            background-color:#f0f0f0;
         }
     </style>
-
 </head>
 
 <body>
@@ -108,10 +108,8 @@
                             <li>
                                 <img src="images/folder-closed.gif" /> 근태관리
                                 <ul>
-                                    <li><img src="images/folder.gif" /> 1. <a href="#">내 근태현황</a>
-                                    </li>
-                                    <li><img src="images/folder.gif" /> 2. <a href="#">내 인사정보</a>
-                                    </li>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_attend_info.html">내 근태현황</a></li>
+                                    <li><img src="images/folder.gif" /> 2. <a href="grp_my_info.html">내 인사정보</a></li>
                                 </ul>
                             </li>
 
@@ -122,18 +120,15 @@
                                     </li>
                                     <li><img src="images/folder.gif" /> 2. <a href="grp_survey_close.html">종료된 설문</a>
                                     </li>
-                                    <li><img src="images/folder.gif" /> 3. <a href="#">내가 만든 설문</a>
-                                    </li>
+                                    <li><img src="images/folder.gif" /> 3. <a href="#">내가 만든 설문</a></li>
                                 </ul>
                             </li>
 
                             <li>
                                 <img src="images/folder-closed.gif" /> 자료실
                                 <ul>
-                                    <li><img src="images/folder.gif" /> 1. <a href="#">문서양식</a>
-                                    </li>
-                                    <li><img src="images/folder.gif" /> 2. <a href="#">제품소개서</a>
-                                    </li>
+                                    <li><img src="images/folder.gif" /> 1. <a href="grp_file_upload.html">문서양식</a></li>
+                                    <li><img src="images/folder.gif" /> 2. <a href="grp_file_upload.html">제품소개서</a></li>
                                 </ul>
                             </li>
 
@@ -178,11 +173,6 @@
 </body>
 <script src="js/treeview.js"></script>
 <script src="js/tab.js"></script>
-<script>
-    $(function () {
-        $("tr:nth-child(2n+1)").addClass("tr-even");
-    })
-</script>
 <script type="text/javascript">
     $(function () {
 
