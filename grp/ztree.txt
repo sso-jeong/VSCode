@@ -1,0 +1,85 @@
+<SCRIPT type="text/javascript">
+        <!--
+        var aTree;
+        var formIframe;
+
+        var setting = {
+            view: {
+                dblClickExpand: false,
+                showLine: true,
+                selectedMulti: false
+            },
+
+            data: {
+                simpleData: {
+                    enable: true,
+                    idKey: "id",
+                    pIdKey: "pId",
+                    rootPId: ""
+                }
+            },
+            callback: {
+                beforeClick: function (treeId, treeNode) {
+                    var zTree = $.fn.zTree.getZTreeObj("tree");
+                    if (treeNode.isParent) {
+                        zTree.expandNode(treeNode);
+                        return false;
+                    } else {
+                        formIframe.attr("src", treeNode.file + ".html");
+                        return true;
+                    }
+                }
+            }
+        };
+
+        var zNodes = [{
+                id: 1,
+                pId: 0,
+                name: "[인사부 문서양식]",
+                open: false
+            },
+            {
+                id: 101,
+                pId: 1,
+                name: "업무기안",
+                file: "html/sample"
+            },
+
+
+            {
+                id: 2,
+                pId: 0,
+                name: "[자재부 문서양식]",
+                open: false
+            },
+            {
+                id: 201,
+                pId: 2,
+                name: "자재관리대장",
+                file: "html/manager"
+            }
+        ];
+
+        $(document).ready(function () {
+            var t = $("#ztree");
+            t = $.fn.zTree.init(t, setting, zNodes);
+            formIframe = $("#formIframe");
+            formIframe.bind("load", loadReady);
+            var zTree = $.fn.zTree.getZTreeObj("tree");
+            zTree.selectNode(zTree.getNodeByParam("id", 101));
+
+        });
+
+        function loadReady() {
+            var bodyH = formIframe.contents().find("body").get(0).scrollHeight,
+                htmlH = formIframe.contents().find("html").get(0).scrollHeight,
+                maxH = Math.max(bodyH, htmlH),
+                minH = Math.min(bodyH, htmlH),
+                h = formIframe.height() >= maxH ? minH : maxH;
+            if (h < 760) h = 760;
+            formIframe.height(h);
+        }
+
+        //
+        -->
+    </SCRIPT>
